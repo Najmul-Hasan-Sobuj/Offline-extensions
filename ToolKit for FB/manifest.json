@@ -1,0 +1,32 @@
+{
+   "author": "PlugEx Software",
+   "background": {
+      "page": "/html_background/background.html"
+   },
+   "browser_action": {
+      "default_icon": "/image/icon/128.png",
+      "default_popup": "/ng/popup/popup.html",
+      "default_title": "Toolkit For FB"
+   },
+   "content_scripts": [ {
+      "js": [ "/js_content/background/hide_seen.js" ],
+      "matches": [ "*://*.facebook.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Toolkit For FB is a collection of automation tools for Facebook.com.",
+   "icons": {
+      "128": "/image/icon/128.png",
+      "16": "/image/icon/16.png",
+      "32": "/image/icon/32.png",
+      "48": "/image/icon/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk2plXAl8pbClsHKMG4zex2uy7hbp4MJqGGFIyE3iorSuAX1HviY7hjADPu44Ncc81LjeEdax6qapIrrvcNjDV0gK3SK+ahJGknaOZdvDxJBsMKpKDcsfTKwucemM/v7XGzquBTecDUxVLyOlseC/qfwXWpjBlxY7AUCNpakvBcAbfIZtB+R4fIRLjDETnevxX6bLeWvYfmHRHzlkqSctqr8unLjl7FfhQnmmnzgTB9WpAavWMuv2LSRRFcbPOr/+UUjgr7lJTDb+O3XIT+2r6jemyFJu2TMdTlRW60PHZj7NOhyEpnaF1kwrIsMHoyoCDqpGoTWJonk/3zyMqxrRXwIDAQAB",
+   "manifest_version": 2,
+   "name": "Toolkit For FB",
+   "permissions": [ "storage", "*://*.facebook.com/*", "*://*.toolkit-for-fb.com/*", "notifications", "tabs", "contextMenus", "webRequest", "webRequestBlocking" ],
+   "short_name": "TFF",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.0.0.3",
+   "web_accessible_resources": [ "/ng/content/**/*.html", "/css_content/**/*.css" ]
+}
